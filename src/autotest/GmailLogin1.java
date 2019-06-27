@@ -30,9 +30,9 @@ public class GmailLogin1 {
             driver.get(appUrl); 
             // Click on Registration link 
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            driver.findElement(By.id("identifierId")).sendKeys("hayatahimed518@gmail.com");
+            driver.findElement(By.id("identifierId")).sendKeys("My@gmail.com");
             driver.findElement(By.xpath("//*[@id='identifierNext']/span/span")).click();
-            driver.findElement(By.name("password")).sendKeys("hayyuu518");
+            driver.findElement(By.name("password")).sendKeys("Mypass");
             Thread.sleep(1000L);
             driver.findElement(By.xpath("//*[@id=\'passwordNext\']/span/span")).click();
             
@@ -58,7 +58,3 @@ public class GmailLogin1 {
             driver.close();}
             
 }
-//String gradeOutput = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/table/tbody/tr[3]")).getText();
-//            PrintStream fileStream = new PrintStream(new File("gradefile.txt"));
-//            fileStream.println(gradeOutput);
-//            fileStream.close();
