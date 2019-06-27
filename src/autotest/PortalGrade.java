@@ -28,8 +28,8 @@ public class PortalGrade {
             driver.get(appUrl); 
             // Click on Registration link 
             String gradeUrl = "https://portal.aait.edu.et/Grade/GradeReport";
-            driver.findElement(By.xpath("//*[@id=\"UserName\"]")).sendKeys("atr/3657/09"); 
-            driver.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("5208"); 
+            driver.findElement(By.xpath("//*[@id=\"UserName\"]")).sendKeys("xyz/xyz/09"); 
+            driver.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("mypass"); 
             driver.findElement(By.xpath("//*[@id=\"home\"]/div[2]/div[2]/form/div[4]/div/button")).click();
             driver.navigate().to(gradeUrl);
             List<WebElement> gradeOutput = driver.findElements(By.tagName("tr"));
@@ -41,7 +41,10 @@ public class PortalGrade {
                     String str=grade.getText();
                     fileStream.println(str);
                     
-            }}fileStream.close();}
+            }
+            }
+            fileStream.close();
+            }
             catch(Exception e){
                 e.printStackTrace();
             }
